@@ -1,27 +1,16 @@
 # AngularDockerRnd
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.8.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Create a file named 'dockerfile'.
+- Define properties or command in dockerfile
+- 'docker build -t myangularimageui -f dockerfile .' :: Create image as 'myangularimageui'
+- 'docker images' :: To see the images of docker
+- 'docker run -it -d  -p 8001:80 --name myuicontainer myangularimageui' :: To create docker container
+- 'docker ps' :: To see docker containers
+- 'docker stop ca989a177059' :: To stop docker container. Here 'ca989a177059' is container ID.
+- 'docker rm ca989a177059' :: To remove docker container. Here 'ca989a177059' is container ID.
+- 'docker login -u userName' :: To login docker docker hub.
+- 'docker tag myangularimageui userName/myangularimageui' :: To tag local image for uploading in docker hub. Here 'myangularimageui' is local image
+- 'docker push userName/myangularimageui' :: To push local image in docker hub. Here 'myangularimageui' is local image.
+- 'docker stop $(docker ps -a -q)' :: To stop all running containers.
+- 'docker rm $(docker ps -a -q)' :: To remove all containers.
+- 'docker rmi myangularimageui' :: To remove single image from local. Here 'myangularimageui' is local image.
+- 'docker rmi $(docker images -q)' :: To remove all images from local.
