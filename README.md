@@ -14,3 +14,4 @@
 - 'docker rm $(docker ps -a -q)' :: To remove all containers.
 - 'docker rmi myangularimageui' :: To remove single image from local. Here 'myangularimageui' is local image.
 - 'docker rmi $(docker images -q)' :: To remove all images from local.
+- `docker rmi -f <image_id>`: To delete specific image forcely
